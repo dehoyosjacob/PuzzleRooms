@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float gravity;
     [SerializeField] LayerMask groundMask;
     [SerializeField] CharacterController controller;
+    [SerializeField] GameObject door;
 
     bool isGrounded;
     Vector3 velocity;
@@ -61,6 +62,13 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        // This is just a placeholder. Right a new script later that governs how to open doors
+
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            door.SetActive(false);
+        }
 
     }
 }
