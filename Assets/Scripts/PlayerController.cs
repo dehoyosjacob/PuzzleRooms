@@ -63,12 +63,5 @@ public class PlayerController : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-        // This is just a placeholder. Right a new script later that governs how to open doors
-
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            door.SetActive(false);
-        }
-
     }
 }
