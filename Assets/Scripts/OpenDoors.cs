@@ -15,67 +15,219 @@ public class OpenDoors : MonoBehaviour
     [SerializeField] GameObject door9;
     [SerializeField] GameObject door10;
     [SerializeField] GameObject door11;
-    [SerializeField] GameObject door12;
-    [SerializeField] GameObject door13;
 
-    private int questionNumber = 0;
-    private bool pressed1 = false;
-    private bool pressed2 = false;
-    private bool pressed3 = false;
-    private bool pressed4 = false;
+    private int qNum = 1;
+
+    public int numWrong = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        questionNumber = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Keypad1) || Input.GetKey(KeyCode.Alpha1))
+        if(Input.GetKeyUp(KeyCode.Keypad1) || Input.GetKeyUp(KeyCode.Alpha1))
         {
-            pressed1 = true;
-            pressed2 = false;
-            pressed3 = false;
-            pressed4 = false;
+            Debug.Log("Pressed 1!");
+            checkAnswer(1);
         }
 
-        else if(Input.GetKeyUp(KeyCode.Keypad2) || Input.GetKeyUp(KeyCode.Alpha2))
+        if(Input.GetKeyUp(KeyCode.Keypad2) || Input.GetKeyUp(KeyCode.Alpha2))
         {
-            pressed1 = false;
-            pressed2 = true;
-            pressed3 = false;
-            pressed4 = false;
+            Debug.Log("Pressed 2!");
+            checkAnswer(2);
         }
 
-        else if(Input.GetKeyUp(KeyCode.Keypad3) || Input.GetKeyUp(KeyCode.Alpha3))
+        if(Input.GetKeyUp(KeyCode.Keypad3) || Input.GetKeyUp(KeyCode.Alpha3))
         {
-            pressed1 = false;
-            pressed2 = false;
-            pressed3 = true;
-            pressed4 = false;
+            Debug.Log("Pressed 3!");
+            checkAnswer(3);
         }
 
-        else if(Input.GetKeyUp(KeyCode.Keypad4) || Input.GetKeyUp(KeyCode.Alpha4))
+        if(Input.GetKeyUp(KeyCode.Keypad4) || Input.GetKeyUp(KeyCode.Alpha4))
         {
-            pressed1 = false;
-            pressed2 = false;
-            pressed3 = false;
-            pressed4 = true;
+            Debug.Log("Pressed 4!");
+            checkAnswer(4);
         }
+    }
 
-        if(questionNumber == 1)
+    private void checkAnswer(int answer)
+    {
+        if(qNum == 1)
         {
-            if(pressed2)
+            if(answer == 1)
             {
+                Debug.Log("correct!");
                 door1.SetActive(false);
-                questionNumber++;
+                qNum++;
             }
 
-            else if(pressed1 || pressed3 || pressed4)
+            else
             {
-                Debug.Log("Wrong answer, try again");
+                Debug.Log("I'm sorry, that's the wrong answer!");
+                numWrong++;
+            }
+        }
+
+        else if(qNum == 2)
+        {
+            if(answer == 1)
+            {
+                Debug.Log("correct!");
+                door2.SetActive(false);
+                qNum++;
+            }
+
+            else
+            {
+                Debug.Log("I'm sorry, that's the wrong answer!");
+                numWrong++;
+            }
+        }
+
+        else if (qNum == 3)
+        {
+            if (answer == 3)
+            {
+                Debug.Log("correct!");
+                door3.SetActive(false);
+                qNum++;
+            }
+
+            else
+            {
+                Debug.Log("I'm sorry, that's the wrong answer!");
+                numWrong++;
+            }
+        }
+
+        else if (qNum == 4)
+        {
+            if (answer == 2)
+            {
+                Debug.Log("correct!");
+                door4.SetActive(false);
+                qNum++;
+            }
+
+            else
+            {
+                Debug.Log("I'm sorry, that's the wrong answer!");
+                numWrong++;
+            }
+        }
+
+        else if (qNum == 5)
+        {
+            if (answer == 4)
+            {
+                Debug.Log("correct!");
+                door5.SetActive(false);
+                qNum++;
+            }
+
+            else
+            {
+                Debug.Log("I'm sorry, that's the wrong answer!");
+                numWrong++;
+            }
+        }
+
+        else if (qNum == 6)
+        {
+            if (answer == 2)
+            {
+                Debug.Log("correct!");
+                door6.SetActive(false);
+                qNum++;
+            }
+
+            else
+            {
+                Debug.Log("I'm sorry, that's the wrong answer!");
+                numWrong++;
+            }
+        }
+
+        else if (qNum == 7)
+        {
+            if (answer == 4)
+            {
+                Debug.Log("correct!");
+                door7.SetActive(false);
+                qNum++;
+            }
+
+            else
+            {
+                Debug.Log("I'm sorry, that's the wrong answer!");
+                numWrong++;
+            }
+        }
+
+        else if (qNum == 8)
+        {
+            if (answer == 2)
+            {
+                Debug.Log("correct!");
+                door8.SetActive(false);
+                qNum++;
+            }
+
+            else
+            {
+                Debug.Log("I'm sorry, that's the wrong answer!");
+                numWrong++;
+            }
+        }
+
+        else if (qNum == 9)
+        {
+            if (answer == 4)
+            {
+                Debug.Log("correct!");
+                door9.SetActive(false);
+                qNum++;
+            }
+
+            else
+            {
+                Debug.Log("I'm sorry, that's the wrong answer!");
+                numWrong++;
+            }
+        }
+
+        else if (qNum == 10)
+        {
+            if (answer == 4)
+            {
+                Debug.Log("correct!");
+                door10.SetActive(false);
+                qNum++;
+            }
+
+            else
+            {
+                Debug.Log("I'm sorry, that's the wrong answer!");
+                numWrong++;
+            }
+        }
+
+        else if (qNum == 11)
+        {
+            if (answer == 3)
+            {
+                Debug.Log("correct!");
+                door11.SetActive(false);
+                qNum++;
+            }
+
+            else
+            {
+                Debug.Log("I'm sorry, that's the wrong answer!");
+                numWrong++;
             }
         }
     }
