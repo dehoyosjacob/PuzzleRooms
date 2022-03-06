@@ -11,6 +11,8 @@ public class CameraMovement : MonoBehaviour
     float mouseY = 0;
     float xRotation = 0f;
 
+    public bool isPaused = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +22,17 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        if (isPaused)
+        {
+            mouseX = 0f;
+            mouseY = 0f;
+        }
+
+        else if(!isPaused)
+        {
+            mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+            mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        }
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 50f);
