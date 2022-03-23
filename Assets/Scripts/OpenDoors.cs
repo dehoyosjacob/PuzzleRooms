@@ -15,6 +15,8 @@ public class OpenDoors : MonoBehaviour
     [SerializeField] GameObject door9;
     [SerializeField] GameObject door10;
     [SerializeField] GameObject door11;
+    [SerializeField] AudioSource openDoor;
+    [SerializeField] AudioSource wrongAnswer;
 
     private int qNum = 1;
 
@@ -61,6 +63,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("correct!");
                 door1.SetActive(false);
+                openDoor.Play();
                 qNum++;
             }
 
@@ -68,6 +71,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("I'm sorry, that's the wrong answer!");
                 numWrong++;
+                wrongAnswer.Play();
             }
         }
 
@@ -77,6 +81,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("correct!");
                 door2.SetActive(false);
+                openDoor.Play();
                 qNum++;
             }
 
@@ -84,6 +89,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("I'm sorry, that's the wrong answer!");
                 numWrong++;
+                wrongAnswer.Play();
             }
         }
 
@@ -93,6 +99,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("correct!");
                 door3.SetActive(false);
+                openDoor.Play();
                 qNum++;
             }
 
@@ -100,6 +107,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("I'm sorry, that's the wrong answer!");
                 numWrong++;
+                wrongAnswer.Play();
             }
         }
 
@@ -109,6 +117,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("correct!");
                 door4.SetActive(false);
+                openDoor.Play();
                 qNum++;
             }
 
@@ -116,6 +125,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("I'm sorry, that's the wrong answer!");
                 numWrong++;
+                wrongAnswer.Play();
             }
         }
 
@@ -125,6 +135,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("correct!");
                 door5.SetActive(false);
+                openDoor.Play();
                 qNum++;
             }
 
@@ -132,6 +143,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("I'm sorry, that's the wrong answer!");
                 numWrong++;
+                wrongAnswer.Play();
             }
         }
 
@@ -141,6 +153,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("correct!");
                 door6.SetActive(false);
+                openDoor.Play();
                 qNum++;
             }
 
@@ -148,6 +161,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("I'm sorry, that's the wrong answer!");
                 numWrong++;
+                wrongAnswer.Play();
             }
         }
 
@@ -157,6 +171,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("correct!");
                 door7.SetActive(false);
+                openDoor.Play();
                 qNum++;
             }
 
@@ -164,6 +179,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("I'm sorry, that's the wrong answer!");
                 numWrong++;
+                wrongAnswer.Play();
             }
         }
 
@@ -173,6 +189,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("correct!");
                 door8.SetActive(false);
+                openDoor.Play();
                 qNum++;
             }
 
@@ -180,6 +197,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("I'm sorry, that's the wrong answer!");
                 numWrong++;
+                wrongAnswer.Play();
             }
         }
 
@@ -189,6 +207,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("correct!");
                 door9.SetActive(false);
+                openDoor.Play();
                 qNum++;
             }
 
@@ -196,6 +215,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("I'm sorry, that's the wrong answer!");
                 numWrong++;
+                wrongAnswer.Play();
             }
         }
 
@@ -205,6 +225,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("correct!");
                 door10.SetActive(false);
+                openDoor.Play();
                 qNum++;
             }
 
@@ -212,6 +233,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("I'm sorry, that's the wrong answer!");
                 numWrong++;
+                wrongAnswer.Play();
             }
         }
 
@@ -221,6 +243,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("correct!");
                 door11.SetActive(false);
+                openDoor.Play();
                 qNum++;
             }
 
@@ -228,6 +251,7 @@ public class OpenDoors : MonoBehaviour
             {
                 Debug.Log("I'm sorry, that's the wrong answer!");
                 numWrong++;
+                wrongAnswer.Play();
             }
         }
     }
